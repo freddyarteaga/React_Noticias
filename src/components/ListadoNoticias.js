@@ -1,14 +1,15 @@
 import React from 'react';
-import Noticia from './Noticia'
+import Noticia from './Noticia';
 
-const ListadoNoticias = ({noticias}) => {
-    return ( 
-        <div className='row'>
+const ListadoNoticias = ({noticias}) =>  ( 
+        <div className="row">
             {noticias.map(noticia => (
-                <Noticia />
+                <Noticia 
+                    key={noticia.url}
+                    noticia={noticia}
+                />
             ))}
         </div>
-     );
-}
- 
+);
+
 export default ListadoNoticias;
